@@ -11,10 +11,14 @@
 
 const findMax = (arr)=>{
     //arr[12,32,22,45,78,12,50]
-    let max=arr[0];
-    for(let i; i<arr.length;i++){
+    let max;
+    max=arr[0];
+    for(let i=0; i<arr.length;i++){
         if (arr[i] > max) {
             max = arr[i];
+          }
+          else{
+              continue
           }
 
     }
@@ -34,15 +38,15 @@ const findMax = (arr)=>{
 
 const sumNums = (arr)=>{
 //  arr[20,'234','car',41,20,'chair']
-    let sum=0;
-    for(let i=1;i<arr.length;i++) 
+    let sum;
+    sum=0;
+    for(let i=0;i<arr.length;i++) 
     {
-        if (! arr[i].toString) {
-            sum+=arr[i]; 
-        }else {
-            continue
-        }
-        
+        if ( isNaN (arr[i])) {
+           continue;
+         
+        }else
+        sum=sum+arr[i];
     }
   
     return sum;
@@ -57,10 +61,12 @@ const sumNums = (arr)=>{
 // 
 // ------------------------
 const reverseArray = (arr)=>{
-  //  arr['C#','JS','Ruby','Python']
-    for(let i=arr.length-1;i>=0;i--){
-        console.log(arr[i]);
+  let newArr=[];
+    for(let i=0,j=arr.length-1;i<arr.length;i++,j--){
+       newArr[i]=arr[j]
+      
     }
+    return newArr;
 }
 
 module.exports = {findMax , sumNums, reverseArray};
