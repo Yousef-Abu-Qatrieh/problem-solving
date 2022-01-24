@@ -12,7 +12,7 @@
 const findMax = (arr)=>{
     //arr[12,32,22,45,78,12,50]
     let max=arr[0];
-    for(let i; i<arr.lenght;i++){
+    for(let i; i<arr.length;i++){
         if (arr[i] > max) {
             max = arr[i];
           }
@@ -35,7 +35,7 @@ const findMax = (arr)=>{
 const sumNums = (arr)=>{
 //  arr[20,'234','car',41,20,'chair']
     let sum=0;
-    for(let i=1;i<arr.lenght;i++) 
+    for(let i=1;i<arr.length;i++) 
     {
         if (! arr[i].toString) {
             sum+=arr[i]; 
@@ -58,7 +58,7 @@ const sumNums = (arr)=>{
 // ------------------------
 const reverseArray = (arr)=>{
   //  arr['C#','JS','Ruby','Python']
-    for(let i=arr.lenght-1;i>=0;i--){
+    for(let i=arr.length-1;i>=0;i--){
         console.log(arr[i]);
     }
 }
