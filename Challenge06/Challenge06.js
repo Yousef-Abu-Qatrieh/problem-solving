@@ -42,11 +42,12 @@ const sumNums = (arr)=>{
     sum=0;
     for(let i=0;i<arr.length;i++) 
     {
-        if ( isNaN (arr[i])) {
-           continue;
+        if ( typeof (arr[i])=='number') {
+            sum=sum+arr[i];
+           
          
-        }else
-        sum=sum+arr[i];
+        }else{ continue;}
+        
     }
   
     return sum;
